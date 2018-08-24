@@ -1,0 +1,155 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+
+#top
+{
+    float: left;
+    width: 100%;
+    margin: 15px;
+}
+
+#nav ul
+{
+    list-style: none;
+    float: right;
+    padding-right: 30px;
+}
+
+#nav ul li 
+{
+    float: left;
+    border-right: 1px solid #efefef;
+    text-align: center;
+    padding: 0px 20px;
+    color: #a8a8a8;
+}
+
+#nav ul li:last-child
+{
+    border: none!important;
+}
+
+#nav ul li.selected
+{
+    color: black;
+}
+
+#nav ul li a{
+    all: unset;
+    transition: color 0.3s;
+}
+
+#nav ul li a:hover {
+    cursor: pointer;
+    color: #7a7a7a;
+}
+
+#head 
+{
+    float:left;
+    height: 300px;
+    width: 100%;
+    background: rgba(200,200,200,0.1);
+    background-image: url('../img/head.png');
+    box-shadow: 5px 10px 30px -5px #808080;
+    color: white;
+}
+
+.head-title-container
+{
+    margin: 100px;
+}
+
+.head-title
+{
+    font-size: 30pt;
+}
+
+.head-title-sub
+{
+    font-size: 15pt;
+}
+
+#content
+{
+    padding: 25px 500px;
+    float:left;
+}
+
+
+.frame
+{
+    background: #dddddd;
+    min-height: 50px;
+    text-align: center;
+    margin: 50px auto;
+    display:flex;justify-content:center;align-items:center;width:75%;
+    width: 100%;
+}
+
+.frame-shadow
+{
+    box-shadow: 0px 3px 10px  #888888;
+}
+
+.frame-placeholder
+{
+    font-weight: bold;
+    color: #888888;
+}
+
+
+.frame-80
+{
+    width: 80%;
+}
+
+.frame-75
+{
+    width: 75%;
+}
+.frame-50
+{
+    width: 50%;
+}
+
+
+.separator
+{
+    width: 100%;
+    border-top: 1px solid;
+}
+
+.separator-xs
+{
+    margin: 5px 0px;
+}
+
+.separator-s
+{
+    margin: 10px 0px;
+}
+
+.separator-m
+{
+    margin: 20px 0px;
+}
+
+.separator-l
+{
+    margin: 40px 0px;
+}
+
+.separator-xl
+{
+    margin: 80px 0px;
+}
+
+.separator-light
+{
+    border-color: #aaaaaa;
+}
