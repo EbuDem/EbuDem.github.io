@@ -1,71 +1,51 @@
 <html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div id="top">
-            <div id="nav">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/project.html">Projects</a></li>
-                    <li><a href="/aboutme.html">About Me</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="head">
-            <div id="slider-container">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-            </div>
+<body>
+    <div id="top">
+        <div id="nav">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/project.html">Projects</a></li>
+                <li><a href="/aboutme.html">About Me</a></li>
+            </ul>
         </div>
-        <div id="content">
-            <h2>GJK-Algorithm</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
-                Lorem ipsum dolor sit amet.
-            </p>
-            <div class="separator separator-l separator-light"></div>
-            <h2>SAT-Algorithm</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
-                Lorem ipsum dolor sit amet.
-            </p>    
-            <div class="separator separator-l separator-light"></div>
-            <h2>Equation Parser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
-                Lorem ipsum dolor sit amet.
-            </p>   
-          
-            <!-- <div class="frame frame-80 frame-placeholder frame-shadow"> PLACEHOLDER</div> -->
-        </div>
-        <script src="js/main.js"></script>
-
-
-    
-    </body>
-    <div style="display: none" id="slides">
-        <slide title="Pool-Physics" subtitle="How to implement pool physics in JavaScript" image="img/head2.png" url="/page.html?pool"></slide>
-        <slide title="GJK-Algorithm" subtitle="A interactive explanation of the GJK-Algorithm"  color="#a8a8ff" url="/page.html?gjk"></slide>
-        
     </div>
+    <div id="head">
+        <div id="slider-container">
+            <div class="slide" style="background: url('img/head.png');">
+                <div class="head-title-container">
+                    <div class="head-title">Ebu's Blog</div>
+                    <div class="head-title-sub">Here you can find some stuff I'm working or worked on</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div v-for="item in posts">
+        <h2>GJK-Algorithm</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+            et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+            dolor sit amet.
+        </p>
+        <div class="separator separator-l separator-light"></div>
+        </div>
+    </div>
+ 
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
 </html>
