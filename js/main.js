@@ -32,7 +32,7 @@ let app = new Vue({
         posts: [],
         db: undefined,
     },
-    created: function() 
+    created: async function() 
     {
         console.log(this.posts);
         firebase.initializeApp({
@@ -43,12 +43,18 @@ let app = new Vue({
           });
           let tmp = [];
           this.db = firebase.firestore();
-          this.db.settings({ timestampsInSnapshots: true, })
-          this.db.collection("post").get().then((snap) => {
-            snap.forEach((doc) => {
-                tmp.push(doc.data());
-            });
-        });
+          this.db.settings({ timestampsInSnapshots: true, });
+          let snap = await this.db.collection("post").get();
+          console.log(snap);
+
+          snap.forEach(function (e) {
+              let obj = e.data();
+              obj.id = e.id;
+              tmp.push(obj);
+          })
+         
+         
+   
         this.posts = tmp;
     }
 })
