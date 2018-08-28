@@ -15,17 +15,15 @@
             </ul>
         </div>
     </div>
-    <div id="head">
-        <div id="slider-container">
-            <div class="slide" style="background: url('img/head.png');">
-                <div class="head-title-container">
+
+    <div id="content">
+        <div id="head" style="background: url('img/head.png'); ">
+            <img src="img/logo_inv.svg" class="head-logo">
+                <!-- <div class="head-title-container" >
                     <div class="head-title">Ebu's Blog</div>
                     <div class="head-title-sub">Here you can find some stuff I'm working or worked on</div>
-                </div>
-            </div>
+                </div> -->
         </div>
-    </div>
-    <div id="content">
         <div v-for="(item,index) in posts">
             <a v-bind:href="'article.html?article='+item.id"><h2 v-html="item.title"></h2></a>
             <p v-html="item.description"></p>

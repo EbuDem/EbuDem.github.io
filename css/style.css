@@ -58,8 +58,9 @@ html,body {
     height: 300px;
     width: 100%;
     color: white;
-    overflow-x: hidden;
-    box-shadow: 5px 10px 30px -5px #808080;
+    overflow-x: inherit;
+    position: relative;
+    /* box-shadow: 5px 10px 30px -5px #808080; */
   
 }
 
@@ -69,6 +70,18 @@ html,body {
     height: 300px;
     display: inline-block;
     margin-right: -4px;
+}
+
+.head-logo
+{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    margin-left: -100px;
+    box-shadow: 5px 10px 30px -5px rgba(0,0,0,0.5);
 }
 
 #slider-container
@@ -83,6 +96,15 @@ a
 {
     color: inherit;
     text-decoration: inherit;
+    transition: color 0.2s ease;
+}
+
+a:hover 
+{
+    color: #a8a8a8;
+    text-decoration: inherit;
+    transition: color 0.2s ease;
+    
 }
 
 a:hover > .slide  {
@@ -231,4 +253,3 @@ a:hover > .slide  {
         font-size: 15pt;    
     }
 }
-
