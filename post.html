@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title></title>
+    <title id="title"></title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -10,33 +10,29 @@
         <div id="nav">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/project.html">Projects</a></li>
                 <li><a href="/aboutme.html">About Me</a></li>
             </ul>
         </div>
     </div>
-    <div id="head">
-        <div id="slider-container">
-            <div class="slide" style="background: url('img/head.png');">
-                <div class="head-title-container">
-                    <div class="head-title">Ebu's Blog</div>
-                    <div class="head-title-sub">Here you can find some stuff I'm working or worked on</div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div id="content">
+        <div id="head" >
+            <img src="img/logo_inv.svg" class="head-logo">
+            <br>
+           <p v-html="post.title"> Blog Entries</p>
+        </div>
         <div v-html="post.content">
-      
+            
         </div>
     </div>
+ 
  
 
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
     <script src="js/vue.js"></script>
-    <script src="js/article.js"></script>
+    <script src="js/post.js"></script>
     
 </body>
 </html>

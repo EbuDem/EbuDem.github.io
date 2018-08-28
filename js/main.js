@@ -53,7 +53,7 @@ let app = new Vue({
               tmp.push(obj);
           })
          
-         
+        
    
         this.posts = tmp;
     }

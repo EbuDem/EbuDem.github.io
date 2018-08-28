@@ -8,7 +8,7 @@ let app = new Vue({
     methods: {},
     created: async function() 
     {
-        let id = getParameterByName("article");
+        let id = getParameterByName("id");
         let tmp = {};
         firebase.initializeApp({
             apiKey: 'AIzaSyANzIcmpBHiUcm_D7LJxHoECOFfa0W-u2w',
@@ -21,6 +21,8 @@ let app = new Vue({
           this.db.settings({ timestampsInSnapshots: true, })
           let snap = await this.db.collection("post").doc(id).get();
           this.post = snap.data();
+
+          document.getElementById("title").innerHTML = this.post.title + " - Ebu's Blog";
     }
 })
 

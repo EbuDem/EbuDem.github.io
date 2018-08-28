@@ -1,8 +1,9 @@
 <html>
 <head>
-    <title></title>
+    <title>Home - Ebu's Blog</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
 </head>
 
 <body>
@@ -10,22 +11,18 @@
         <div id="nav">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/project.html">Projects</a></li>
                 <li><a href="/aboutme.html">About Me</a></li>
             </ul>
         </div>
     </div>
 
     <div id="content">
-        <div id="head" style="background: url('img/head.png'); ">
-            <img src="img/logo_inv.svg" class="head-logo">
-                <!-- <div class="head-title-container" >
-                    <div class="head-title">Ebu's Blog</div>
-                    <div class="head-title-sub">Here you can find some stuff I'm working or worked on</div>
-                </div> -->
+        <div id="head" >
+            <img src="img/logo_inv.svg" class="head-logo"><br>
+           <p> Blog Entries</p>
         </div>
         <div v-for="(item,index) in posts">
-            <a v-bind:href="'article.html?article='+item.id"><h2 v-html="item.title"></h2></a>
+            <a v-bind:href="'post.html?id='+item.id"><h2 v-html="item.title"></h2></a>
             <p v-html="item.description"></p>
             
             <div v-if="index !== posts.length-1" class="separator separator-l separator-light"></div>
