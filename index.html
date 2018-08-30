@@ -1,39 +1,41 @@
-<html>
+<!DOCTYPE html>
 <head>
     <title>Home - Ebu's Blog</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/roboto.css">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='language' content='EN'>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A personal blog about visual computing and game development"/>
 </head>
 
 <body>
-    <div id="top">
-        <div id="nav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/aboutme.html">About Me</a></li>
-            </ul>
+    <div id="wrapper">
+     
+            <img src="img/logo_inv.svg" class="nav-logo" alt="Logo of Ebu's Blog">
+            <div id="nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/aboutme.html">About Me</a></li>
+                </ul>
+            </div>
+   
+        <div id="head">
+           Blog Entries</p>
+        </div>
+        <div id="content">
+            <div v-for="(item,index) in posts">
+                <a v-bind:href="'post.html?id='+item.id"><h2 v-html="item.title"></h2></a>
+                <p v-html="item.description"></p>
+                <div v-if="index !== posts.length-1" class="separator separator-l separator-light"></div>
+            </div>
         </div>
     </div>
-
-    <div id="content">
-        <div id="head" >
-            <img src="img/logo_inv.svg" class="head-logo"><br>
-           <p> Blog Entries</p>
-        </div>
-        <div v-for="(item,index) in posts">
-            <a v-bind:href="'post.html?id='+item.id"><h2 v-html="item.title"></h2></a>
-            <p v-html="item.description"></p>
-            
-            <div v-if="index !== posts.length-1" class="separator separator-l separator-light"></div>
-        </div>
-    </div>
- 
-
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
-    <script src="js/vue.js"></script>
+    <script src="js/vue.js"></script> 
     <script src="js/main.js"></script>
     
 </body>
