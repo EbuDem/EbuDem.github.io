@@ -2,35 +2,37 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-csso');
 var minify = require('gulp-minify');
+var minify = require('gulp-minify');
 var htmlmin = require('gulp-htmlmin');
+var watch = require('gulp-watch');
 
 gulp.task('html', function(){
-  return gulp.src('src/*.html')
+  return watch('src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('./'))
 });
 
 gulp.task('css', function(){
-  return gulp.src('src/less/*.less')
+  return watch('src/less/*.less')
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest('css'))
 });
 
 gulp.task('js', function(){
-  return gulp.src('src/js/*.js')
+  return watch('src/js/*.js')
     .pipe(minify())
     .pipe(gulp.dest('js'))
 });
 
 
 gulp.task('img', function(){
-    return gulp.src('src/img/*')
+    return watch('src/img/*')
       .pipe(gulp.dest('img'))
 });
 
 gulp.task('fonts', function(){
-    return gulp.src('src/fonts/*')
+    return watch('src/fonts/*')
       .pipe(gulp.dest('fonts'))
 });
 
