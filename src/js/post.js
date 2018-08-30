@@ -14,14 +14,12 @@ let appPost = new Vue({
             apiKey: 'AIzaSyANzIcmpBHiUcm_D7LJxHoECOFfa0W-u2w',
             authDomain: 'githubpages-7a535.firebaseapp.com',
             projectId: 'githubpages-7a535',
-           
+            
           });
-     
           this.db = firebase.firestore();
           this.db.settings({ timestampsInSnapshots: true, })
           let snap = await this.db.collection("post").doc(id).get();
           this.post = snap.data();
-
           document.getElementById("title").innerHTML = this.post.title + " - Ebu's Blog";
     }
 })

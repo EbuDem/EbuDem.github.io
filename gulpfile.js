@@ -21,7 +21,9 @@ gulp.task('css', function(){
 
 gulp.task('js', function(){
   return watch('src/js/*.js')
-    .pipe(minify())
+    .pipe(minify({
+      noSource: true
+    }))
     .pipe(gulp.dest('js'))
 });
 
