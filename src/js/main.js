@@ -3,6 +3,21 @@
 window.onload = function()
 { 
     menu();
+
+    console.log(`
+           __________                                 
+         .\'----------\`.                              
+         | .--------. |                             
+         | |HACKING#| |       __________              
+         | |########| |      /__________\\             
+.--------| \`--------' |------|    --=-- |-------------.
+|        \`----,-.-----'      |o ======  |             | 
+|       ______|_|_______     |__________|             | 
+|      /  %%%%%%%%%%%%        \\                             | 
+|     /  %%%%%%%%%%%%%%         \\                            | 
+|     ^^^^^^^^^^^^^^^^^^^^                            | 
++-----------------------------------------------------+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `,"font-family:monospace")
   
 }
 
@@ -35,7 +50,6 @@ let app = new Vue({
     },
     created: async function() 
     {
-        console.log(this.posts);
         firebase.initializeApp({
             apiKey: 'AIzaSyANzIcmpBHiUcm_D7LJxHoECOFfa0W-u2w',
             authDomain: 'githubpages-7a535.firebaseapp.com',
