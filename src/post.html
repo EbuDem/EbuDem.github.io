@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Home - Ebu's Blog</title>
+    <title id="title">Home - Ebu's Blog</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
@@ -14,25 +14,30 @@
 <body>
     <div id="wrapper">
 
-        <img src="img/logo_inv.svg" class="nav-logo" alt="Logo of Ebu's Blog">
+        <img src="img/logo.svg" class="nav-logo" alt="Logo of Ebu's Blog">
         <div id="nav">
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/aboutme.html">About Me</a></li>
             </ul>
         </div>
-
         <div id="head">
-            {{ post.title }}
+            Blog Entries
         </div>
         <div id="content" v-html="post.content">
-
+         
+        </div>
+        <div id="footer">
+            <div class="separator separator-l separator-light"></div>
+            a blog by Ebubekir Demirhan
         </div>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
     <script src="js/vue-min.js"></script>
     <script src="js/post-min.js"></script>
+
 </body>
 
 </html>

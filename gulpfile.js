@@ -8,14 +8,20 @@ var watch = require('gulp-watch');
 
 gulp.task('html', function(){
   return watch('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({collapseWhitespace: true})).on('error', function(err) {
+      console.log('Error:', err);
+    })
     .pipe(gulp.dest('./'))
 });
 
 gulp.task('css', function(){
   return watch('src/less/*.less')
-    .pipe(less())
-    .pipe(minifyCSS())
+    .pipe(less()) .on('error', function(err) {
+      console.log('Error:', err);
+    })
+    .pipe(minifyCSS()) .on('error', function(err) {
+      console.log('Error:', err);
+    })
     .pipe(gulp.dest('css'))
 });
 

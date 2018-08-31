@@ -46,7 +46,6 @@ let app = new Vue({
           this.db = firebase.firestore();
           this.db.settings({ timestampsInSnapshots: true, });
           let snap = await this.db.collection("post").get();
-          console.log(snap);
 
           snap.forEach(function (e) {
               let obj = e.data();

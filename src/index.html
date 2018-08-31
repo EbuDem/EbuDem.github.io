@@ -14,14 +14,13 @@
 <body>
     <div id="wrapper">
 
-        <img src="img/logo_inv.svg" class="nav-logo" alt="Logo of Ebu's Blog">
+        <img src="img/logo.svg" class="nav-logo" alt="Logo of Ebu's Blog">
         <div id="nav">
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/aboutme.html">About Me</a></li>
             </ul>
         </div>
-
         <div id="head">
             Blog Entries
         </div>
@@ -31,6 +30,10 @@
                 <p v-html="item.description"></p>
                 <div v-if="index !== posts.length-1" class="separator separator-l separator-light"></div>
             </div>
+        </div>
+        <div id="footer">
+            <div class="separator separator-l separator-light"></div>
+            a blog by Ebubekir Demirhan
         </div>
     </div>
 
