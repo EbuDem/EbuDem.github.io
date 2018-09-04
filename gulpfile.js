@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-csso');
 var minify = require('gulp-minify');
-var minify = require('gulp-minify');
 var htmlmin = require('gulp-htmlmin');
 var watch = require('gulp-watch');
 

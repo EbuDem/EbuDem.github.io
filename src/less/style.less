@@ -1,5 +1,5 @@
 @color0: #a8a8a8; 
-@color1: #888888; 
+@frame: #aaaaaa; 
 
 html, body {
 	height: 100%;
@@ -68,7 +68,7 @@ html, body {
 
 #head {
 	box-sizing: border-box;
-	font-family: "Ebrima";
+	font-family: Ebrima-Bold;
 	font-size: 40px;
 	font-weight: bold;
 	grid-area: head;
@@ -115,28 +115,43 @@ a {
 }
 
 .frame {
-	align-items:center;
-	background: #dddddd;
+	
+	background: #efefef;
 	display:flex;
-	justify-content:center;
-	margin: 50px auto;
-	min-height: 50px;
+	margin: 20px auto;
+	min-height: 20px;
 	text-align: center;
-	width:75%;
+	justify-content:center;
+	align-items:center;
 }
 
 .frame-shadow {
-	box-shadow: 0px 3px 10px @color1;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+}
+.frame-autofit
+{
+	display: inline-block;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%);
+	font-size: 0;
+}
+
+.frame-autofit * 
+{
+	font-size: 12pt;
 }
 
 .frame-placeholder {
-	color: @color1;
+	color: @frame;
 	font-weight: bold;
 }
 
 .frame-80 {
 	width: 80%;
 }
+
+
 
 .frame-75 {
 	width: 75%;
@@ -176,6 +191,11 @@ a {
 	border-color: #aaaaaa;
 }
 
+.img-responive
+{
+	height: auto;
+    max-width: 100%;
+}
 
 @media only screen and (max-width: 400px) {
     #wrapper{
