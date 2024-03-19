@@ -1,1 +1,89 @@
-<!DOCTYPE html><head><title>Home - Ebu's Blog</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/roboto.css"><link rel="stylesheet" href="css/ebrima.css"><link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="language" content="EN"><meta charset="utf-8"><meta name="description" content="A personal blog about visual computing and game development"></head><body><div id="wrapper"><img src="img/logo.svg" class="nav-logo" alt="Logo of Ebu's Blog"><div id="nav"><ul><li><a href="/index.html">Home</a></li><li><a href="/aboutme.html">About Me</a></li></ul></div><div id="head">Blog Entries</div><div id="content"><div v-for="(item,index) in posts"><a v-bind:href="'post.html?id='+item.id"><h2 v-html="item.title"></h2></a><p v-html="item.description"></p><div v-if="index !== posts.length-1" class="separator separator-l separator-light"></div></div></div><div id="footer"><div class="separator separator-l separator-light"></div>a blog by Ebubekir Demirhan</div></div><script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script><script src="js/vue-min.js"></script><script src="js/main-min.js"></script></body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demirhan</title>
+    <link rel="stylesheet" href="css/roboto.css">
+    <link rel="stylesheet" href="css/ebrima.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section section-white active">
+            <div class="logo fade-in active"><img alt="Logo of website" src="img/logo.svg" /></div>
+            <div class="logo-small fade-in"><img alt="Logo of website" src="img/logo.svg" /></div>
+        </section>
+       
+        <section class="section section-black section-about-me">
+            <div class="section-divider"></div>
+            
+            <div class="parallax-full parallax-me"></div>
+            <div class="parallax-full gradient-overlay"></div>
+            <div class="spacer-5"></div>
+            <div class="spacer-40 text-body">
+                <h1>About Me</h1>
+                <p>My name is Ebu Demirhan, I am 25 years old and I was born and raised in Vienna, Austria. I have a passion for software development, traditional and digital art.</p>
+                <br>
+                <p>
+                My two older brohters introduced me to gaming pretty early. The older one of them had a PlayStation and
+                the middle one a GameBoy. And if they weren't playing I was allowed to. Later on we got a Computer and me and my middle
+                brother played a MMORPG named Metin2 on it. As the days passed we spend more and more time playing and grinding
+                in Metin2. Video games have had a strong influence on my life: as a child, i spend a lot of my spare time with them and later my professional career were strongly influenced by my love for video games.</p>
+            </div>
+            <div class="spacer-50"></div>
+        </section>
+        <section class="section section-white section-cv">
+            <div class="section-divider"></div>
+            <div class="spacer-30"></div>
+            <div class="spacer-40 text-body">
+                <h1>Curriculum vitae</h1>
+                <ul class="timeline">
+                    <li>
+                      <div>
+                        <p class="cv-title">Rubicon</p>
+                        <p>Years: 2022 - Present</p>
+                        <p>Software Developer</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <p class="cv-title">Technical University</p>
+                        <p>Years: 2018 - Present</p>
+                        <p>Medieninformatik</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <p class="cv-title">Higher Technical Institute</p>
+                        <p>Years: 2013 - 2018</p>
+                        <p>IT - Medieninformatik</p>
+                      </div>
+                    </li>
+            </div>
+            <div class="spacer-30"></div>
+        </section>
+        <section class="section section-black">
+            <div class="spacer-50"></div>
+            <div class="spacer-50 text-body">
+                <h1>Development</h1>
+                My fascination with software development stems from a deep-seated passion for crafting interactive experiences that transcend traditional boundaries. 
+                Within the realms of game development and web development, I find myself drawn to projects that seamlessly blend technology with creativity, 
+                allowing me to create captivating experiences that resonate with audiences on a visceral level. 
+            </div>
+            <div class="spacer-5"></div>
+        </section>
+        <section class="section section-white">
+            <div class="spacer-5"></div>
+            <div class="spacer-50 text-body">
+                <h1>Artistic</h1>
+                As an individual deeply passionate about creative expression, I find immense joy and fulfillment in a multitude of artistic endeavors.
+                Sketching, drawing, painting, and 3D modeling serve as not only mediums of self-expression but also as windows into boundless realms of imagination and innovation.
+            </div>
+            <div class="spacer-50"></div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>

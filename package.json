@@ -1,28 +1,7 @@
 {
-  "name": "ebudem.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-less": "^4.0.1",
-    "gulp-minify": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
     "gulp-watch": "^5.0.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EbuDem/ebudem.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EbuDem/ebudem.github.io/issues"
-  },
-  "homepage": "https://github.com/EbuDem/ebudem.github.io#readme"
+  }
 }
