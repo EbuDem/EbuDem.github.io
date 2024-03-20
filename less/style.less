@@ -117,7 +117,8 @@ body {
         background-size: contain;
         background-attachment: fixed;
         background-position: 600px 0px;
-        transition: background-position 20s ease-out,  
+        transition: background-position 20s ease-out;
+    
     }
 
     &.transitioning {
@@ -213,8 +214,15 @@ body {
 .parallax-code 
 {
     filter: blur(10px);
+    transform: scale(1.06);
 }
 
 #section-dev{
  
 }
+
+@media (prefers-color-scheme: dark) {
+    #favicon {
+      filter: invert();
+    }
+  }

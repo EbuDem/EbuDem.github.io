@@ -98,3 +98,12 @@ function connectPoints() {
 }
 
 
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+// Set favicon based on color scheme
+const favicon = document.getElementById("favicon");
+favicon.href = prefersDarkScheme ? "img/favicon_light.png" : "img/favicon.png"
+
+console.log(prefersDarkScheme,prefersLightScheme)

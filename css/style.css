@@ -163,4 +163,10 @@ body {
 }
 .parallax-code {
   filter: blur(10px);
+  transform: scale(1.06);
+}
+@media (prefers-color-scheme: dark) {
+  #favicon {
+    filter: invert();
+  }
 }
