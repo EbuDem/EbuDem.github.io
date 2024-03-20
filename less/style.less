@@ -1,10 +1,12 @@
+@dark: #101010;
+@light: #efefef;
+@mid: white;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@dark: #101010;
-@light: #efefef;
 
 html,
 body {
@@ -36,93 +38,16 @@ body {
     scroll-snap-align: start;
     position: relative;
     overflow: hidden;
-    h1,h2,h3,h4,h5,h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-size: 2em;
         font-family: "Ebrima-Bold";
     }
-}
-
-.parallax-full {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-}
-
-.text-body {
-    font-family: "Roboto";
-    justify-content: flex-start;
-    z-index: 1;
-    flex: 1;
-    transition: opacity 1s ease;
-
-}
-
-.cv-title 
-{
-    font-weight: bold;
-    font-size: 1.25em;
-}
-
-.section-about-me {
-   
-
-    .text-body {
-        opacity: 0;
-        transition: opacity 2s ease
-    }
-
-    .gradient-overlay 
-    {
-        position: absolute;
-        background:  linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(255,255,255,0) 60%);
-        background-repeat: no-repeat;
-        background-size: cover;
-       
-        z-index: 0;
-    }
-
-    .parallax-me {
-   
-        position: absolute;
-        top:0;
-        left:0;
-        background: url("../img/me_big.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed;
-        background-position: 700px 0px;
-        transition: background-position 2s ease;
-    }
-
-    &.transitioning {
-        .text-body {
-            opacity: 1;
-        }
-    }
-
-    &.active {
-        .text-body {
-            opacity: 1;
-        }
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease;
-
-}
-
-.active {
-    &.section-cv {
-     
-    }
-
-    &.fade-in {
-        opacity: 1;
-    }
-
 }
 
 .section-white {
@@ -136,107 +61,160 @@ body {
 }
 
 .logo {
+    position: fixed;
+    top: auto;
     z-index: 100;
-    opacity: 0;
+    opacity: 1;
+    transition: top 0.3s ease;
 
     img {
-
         width: 200px;
-        transition: width 0.3s ease, left 0.3s ease, top 0.3s ease;
-        left: 50%;
-        top: 50%;
+        transition: width 0.3s ease, filter 0.3s ease 0.5s;
+    }
+
+    &.small {
+        top: 2rem;
+        img {
+            width: 100px;
+        }
     }
 }
 
-.logo-inverted 
-{
-    
+.logo-inverted {
     img {
         filter: invert()
     }
 }
-.logo-small {
-    z-index: 100;
 
-    img {
-        width: 100px;
-        z-index: 100;
-        transition: filter 1s ease;
+.text-body {
+    font-family: "Roboto";
+    justify-content: flex-start;
+    z-index: 1;
+    flex: 1;
+    transition: opacity 1s ease;
+}
+
+#section-about-me {
+    .text-body {
+        opacity: 0;
+        transition: opacity 2s ease
     }
 
-    opacity: 0;
-    position: fixed;
-    top: 10px;
+    .gradient-overlay {
+        position: absolute;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 35%, rgba(255, 255, 255, 0) 60%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    .parallax-me {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/me_big.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: 600px 0px;
+        transition: background-position 20s ease-out,  
+    }
+
+    &.transitioning {
+        .text-body {
+            opacity: 1;
+        }
+    }
+
+    &.active {
+        .text-body {
+            opacity: 1;
+        }
+
+        .parallax-me {
+            background-position: 700px 0px;
+        }
     
+    }
 }
 
-
-.spacer-5 {
-    flex: 5%;
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-.spacer-10 {
-    flex: 10%;
-}
-
-.spacer-20 {
-    flex: 20%;
-}
-
-.spacer-30 {
-    flex: 30%;
-}
-
-.spacer-40 {
-    flex: 40%;
-}
-
-.spacer-50 {
-    flex: 50;
-}
-
-.spacer-60 {
-    flex-grow: 60;
-}
-
-.spacer-70 {
-    flex-grow: 70;
-}
-
-.spacer-80 {
-    flex-grow: 80;
-}
-
-.spacer-90 {
-    flex-grow: 90;
-}
-
-
-.timeline {
-    margin-top: 1rem;
-    list-style: none;
-    padding: 0;
-
-    li {
-        position: relative;
-        padding-left: 20px;
-        margin-bottom: 20px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 8px;
-            bottom: 0;
-            border-left: 2px solid @dark;
-            /* Adjust line color and thickness */
+.active {
+    &#section-cv {
+        .cv-point {
+            opacity: 1;
         }
 
-        div {
-            background-color: #f9f9f9;
-            /* Background color for the content */
-            padding: 15px;
-            border-radius: 5px;
+        .cv-line{
+            stroke-dashoffset: 0;
         }
     }
+
+    &.fade-in {
+        opacity: 1;
+    }
+}
+
+
+.cv-wrapper {
+    position: relative;
+    height: 40rem;
+}
+
+.cv-point {
+    position: absolute!important;
+    width: 50px;
+    height: 50px;
+    background-color: @dark;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    .cv-summary {
+        background-color: @mid;
+        width: max-content;
+        margin-top: -10rem;
+        padding: 1rem;
+        box-shadow: 0.125rem 0.125rem 5px rgbA(0,0,0,0.2);
+        .cv-title 
+        {
+            font-weight: bold;
+            position: relative;
+        }
+    }
+}
+
+.cv-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 0.25rem;
+    stroke: @dark;
+    transition: stroke-dashoffset 3s ease;
+}
+
+.code-cursor {
+    animation: blink 1s linear infinite ;
+}
+
+
+.parallax-full {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    z-index: 0;
+}
+
+.parallax-code 
+{
+    filter: blur(10px);
+}
+
+#section-dev{
+ 
 }

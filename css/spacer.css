@@ -1,0 +1,30 @@
+.spacer-5 {
+  flex: 5%;
+}
+.spacer-10 {
+  flex: 10%;
+}
+.spacer-20 {
+  flex: 20%;
+}
+.spacer-30 {
+  flex: 30%;
+}
+.spacer-40 {
+  flex: 40%;
+}
+.spacer-50 {
+  flex: 50;
+}
+.spacer-60 {
+  flex-grow: 60;
+}
+.spacer-70 {
+  flex-grow: 70;
+}
+.spacer-80 {
+  flex-grow: 80;
+}
+.spacer-90 {
+  flex-grow: 90;
+}
