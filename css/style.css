@@ -120,28 +120,35 @@ body {
   opacity: 1;
 }
 .cv-wrapper {
-  position: relative;
-  height: 40rem;
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.cv-point {
-  position: absolute!important;
-  width: 50px;
-  height: 50px;
+.cv-summary {
   background-color: #101010;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-.cv-point .cv-summary {
-  background-color: white;
   width: max-content;
-  margin-top: -10rem;
   padding: 1rem;
   box-shadow: 0.125rem 0.125rem 5px rgba(0, 0, 0, 0.2);
+  color: #efefef;
 }
-.cv-point .cv-summary .cv-title {
+.cv-summary .cv-title {
   font-weight: bold;
   position: relative;
+  font-size: 1.125em;
+}
+.cv-summary-highlight {
+  background-color: white;
+  width: 30rem;
+  box-shadow: 0.125rem 0.125rem 5px rgba(0, 0, 0, 0.2);
+  color: #101010;
+}
+.cv-summary-highlight .cv-title {
+  font-weight: bold;
+  position: relative;
+  font-size: 2em;
 }
 .cv-line {
   stroke-dasharray: 1000;
@@ -151,7 +158,7 @@ body {
   transition: stroke-dashoffset 3s ease;
 }
 .code-cursor {
-  animation: blink 1s linear infinite ;
+  animation: blink 1s linear infinite;
 }
 .parallax-full {
   width: 100%;
@@ -161,12 +168,45 @@ body {
   position: absolute;
   z-index: 0;
 }
-.parallax-code {
+#section-dev .parallax-code {
   filter: blur(10px);
   transform: scale(1.06);
+  transition: transform 50s linear;
+}
+#section-dev.active .parallax-code {
+  transform: scale(1.46) translateY(-200px);
 }
 @media (prefers-color-scheme: dark) {
   #favicon {
     filter: invert();
+  }
+}
+@media screen and (max-width: 1023px) {
+  .section {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  .logo.small {
+    top: 1rem;
+    left: 1rem;
+  }
+  .logo.small img {
+    width: 2rem;
+  }
+  .text-body {
+    padding: 1rem;
+    flex: 5!important;
+  }
+  .cv-wrapper {
+    position: relative;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cv-wrapper .cv-summary {
+    margin-bottom: 2rem;
+    width: 100%;
   }
 }

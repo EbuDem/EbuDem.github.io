@@ -74,6 +74,7 @@ body {
 
     &.small {
         top: 2rem;
+
         img {
             width: 100px;
         }
@@ -118,7 +119,7 @@ body {
         background-attachment: fixed;
         background-position: 600px 0px;
         transition: background-position 20s ease-out;
-    
+
     }
 
     &.transitioning {
@@ -135,7 +136,7 @@ body {
         .parallax-me {
             background-position: 700px 0px;
         }
-    
+
     }
 }
 
@@ -150,7 +151,7 @@ body {
             opacity: 1;
         }
 
-        .cv-line{
+        .cv-line {
             stroke-dashoffset: 0;
         }
     }
@@ -160,32 +161,38 @@ body {
     }
 }
 
-
 .cv-wrapper {
-    position: relative;
-    height: 40rem;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.cv-point {
-    position: absolute!important;
-    width: 50px;
-    height: 50px;
+.cv-summary {
     background-color: @dark;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 1s ease;
+    width: max-content;
+    padding: 1rem;
+    box-shadow: 0.125rem 0.125rem 5px rgbA(0, 0, 0, 0.2);
+    color: @light;
+    .cv-title {
+        font-weight: bold;
+        position: relative;
+        font-size: 1.125em;
+    }
+    
+}
 
-    .cv-summary {
-        background-color: @mid;
-        width: max-content;
-        margin-top: -10rem;
-        padding: 1rem;
-        box-shadow: 0.125rem 0.125rem 5px rgbA(0,0,0,0.2);
-        .cv-title 
-        {
-            font-weight: bold;
-            position: relative;
-        }
+.cv-summary-highlight {
+    background-color: @mid;
+    width: 30rem;
+    box-shadow: 0.125rem 0.125rem 5px rgbA(0, 0, 0, 0.2);
+    color: @dark;
+    .cv-title {
+        font-weight: bold;
+        position: relative;
+        font-size: 2em;
     }
 }
 
@@ -198,31 +205,77 @@ body {
 }
 
 .code-cursor {
-    animation: blink 1s linear infinite ;
+    animation: blink 1s linear infinite;
 }
 
 
 .parallax-full {
     width: 100%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     position: absolute;
     z-index: 0;
 }
 
-.parallax-code 
-{
-    filter: blur(10px);
-    transform: scale(1.06);
-}
 
-#section-dev{
- 
+
+#section-dev {
+    .parallax-code {
+        filter: blur(10px);
+        transform: scale(1.06);
+        transition: transform 50s linear;
+    }
+
+    &.active {
+        .parallax-code {
+            transform: scale(1.46) translateY(-200px);
+        }
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     #favicon {
-      filter: invert();
+        filter: invert();
     }
-  }
+}
+
+@media screen {
+    @media (max-width: 1023px) {
+
+        .section {
+            flex-direction: column;
+            padding-top: 1rem;
+        }
+
+        .logo.small {
+            top: 1rem;
+            left: 1rem;
+
+            img {
+                width: 2rem;
+            }
+
+        }
+
+        .text-body {
+            padding: 1rem;
+            flex: 5!important;
+        }
+
+        .cv-wrapper {
+            position: relative;
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            .cv-summary {
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+        }
+
+    }
+}

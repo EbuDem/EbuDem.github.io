@@ -14,17 +14,33 @@
   flex: 40%;
 }
 .spacer-50 {
-  flex: 50;
+  flex: 50%;
 }
 .spacer-60 {
-  flex-grow: 60;
+  flex: 60%;
 }
 .spacer-70 {
-  flex-grow: 70;
+  flex: 70%;
 }
 .spacer-80 {
-  flex-grow: 80;
+  flex: 80%;
 }
 .spacer-90 {
-  flex-grow: 90;
+  flex: 90%;
+}
+@media screen and (max-width: 1023px) {
+  .spacer-5,
+  .spacer-90,
+  .spacer-80,
+  .spacer-70,
+  .spacer-60,
+  .spacer-50,
+  .spacer-40,
+  .spacer-30,
+  .spacer-20,
+  .spacer-10 {
+    flex: 0.25;
+    height: 1px;
+    min-height: 1px;
+  }
 }
